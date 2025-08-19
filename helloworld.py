@@ -1,10 +1,6 @@
 
 print("Hello World")
 
-print("hello 2nd world with git ")
+VS code modified 
 
-## 3rd test code ##  --> remove
 
-// 4th test code 
-
-## Push test 
