@@ -2,6 +2,4 @@
 
 tutorial project
 
-Hi new merge test 
-
-Push test 
+## 1. When you modify the files, you commit and push them.
