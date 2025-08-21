@@ -9,5 +9,5 @@ tutorial project
     git commit -m "commit message"
     git push   ## update to repository
 
-## 3. 
+## 3. make the test tool by myself
 
