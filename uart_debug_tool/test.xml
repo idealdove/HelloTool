@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SP3i>
+    <FileId>protocol_info</FileId>
+    <IniVersion>1.0.0</IniVersion>
+    <CmdList>
+		<CmdInfo>
+			<Name>Power On</Name>
+			<Len>4</Len>
+			<Cmd>FBA5FD9D</Cmd>
+		</CmdInfo>
+		<CmdInfo>
+			<Name>Power Off</Name>
+			<Len>4</Len>
+			<Cmd>FBA50DAD</Cmd>
+		</CmdInfo>
+		<CmdInfo>
+			<Name>FAN Mode</Name>
+			<Len>4</Len>
+			<Cmd>FBA60DAE</Cmd>
+		</CmdInfo>
+		<CmdInfo>
+			<Name>FAN Manual Mode 1</Name>
+			<Len>4</Len>
+			<Cmd>FBA601A2</Cmd>
+		</CmdInfo>
+		<CmdInfo>
+			<Name>FAN Manual Mode 2</Name>
+			<Len>4</Len>
+			<Cmd>FBA602A3</Cmd>
+		</CmdInfo>		
+		<CmdInfo>
+			<Name>FAN Manual Mode 3</Name>
+			<Len>4</Len>
+			<Cmd>FBA603A4</Cmd>
+		</CmdInfo>
+		<CmdInfo>
+			<Name>FAN Manual Mode 4</Name>
+			<Len>4</Len>
+			<Cmd>FBA604A5</Cmd>
+		</CmdInfo>
+		<CmdInfo>
+			<Name>FAN Auto Mode</Name>
+			<Len>4</Len>
+			<Cmd>FBA90DB1</Cmd>
+		</CmdInfo>
+		<CmdInfo>
+			<Name>LED Display Brightness</Name>
+			<Len>4</Len>
+			<Cmd>FBA70DAF</Cmd>
+		</CmdInfo>
+		<CmdInfo>
+			<Name>[LED Test] All LED On/OFF</Name>
+			<Len>4</Len>
+			<Cmd>FBAA0DB2</Cmd>
+		</CmdInfo>
+		<CmdInfo>
+			<Name>[LED Test] Power LED ON</Name>
+			<Len>4</Len>
+			<Cmd>FBAA11B6</Cmd>
+		</CmdInfo>
+		<CmdInfo>
+			<Name>[LED Test] AQI Value ON</Name>
+			<Len>4</Len>
+			<Cmd>FBAA12B7</Cmd>
+		</CmdInfo>		
+		<CmdInfo>
+			<Name>[LED Test] AQI Level LED ON</Name>
+			<Len>4</Len>
+			<Cmd>FBAA13B8</Cmd>
+		</CmdInfo>
+		<CmdInfo>
+			<Name>[LED Test] Default BAR ON</Name>
+			<Len>4</Len>
+			<Cmd>FBAA14B9</Cmd>
+		</CmdInfo>
+		<CmdInfo>
+			<Name>[LED Test] AQI Shape Blue ON</Name>
+			<Len>4</Len>
+			<Cmd>FBAA15BA</Cmd>
+		</CmdInfo>
+		<CmdInfo>
+			<Name>[LED Test] AQI Shape Green ON</Name>
+			<Len>4</Len>
+			<Cmd>FBAA16BB</Cmd>
+		</CmdInfo>
+		<CmdInfo>
+			<Name>[LED Test] AQI Shape Amber ON</Name>
+			<Len>4</Len>
+			<Cmd>FBAA17BC</Cmd>
+		</CmdInfo>
+		<CmdInfo>
+			<Name>[LED Test] AQI Shape Red ON</Name>
+			<Len>4</Len>
+			<Cmd>FBAA18BD</Cmd>
+		</CmdInfo>
+		<CmdInfo>
+			<Name>[LED Test] FAN Speed BAR LED ON</Name>
+			<Len>4</Len>
+			<Cmd>FBAA19BE</Cmd>
+		</CmdInfo>
+		<CmdInfo>
+			<Name>[LED Test] FAN LED ON</Name>
+			<Len>4</Len>
+			<Cmd>FBAA1ABF</Cmd>
+		</CmdInfo>
+		<CmdInfo>
+			<Name>[LED Test] AUTO LED ON</Name>
+			<Len>4</Len>
+			<Cmd>FBAA1BC0</Cmd>
+		</CmdInfo>
+		<CmdInfo>
+			<Name>[LED Test] DISPLAY LED ON</Name>
+			<Len>4</Len>
+			<Cmd>FBAA1CC1</Cmd>
+		</CmdInfo>
+		<CmdInfo>
+			<Name>[LED Test] FILTER LED ON</Name>
+			<Len>4</Len>
+			<Cmd>FBAA1DC2</Cmd>
+		</CmdInfo>		
+		<CmdInfo>
+			<Name>Max Filter Used Time</Name>
+			<Len>4</Len>
+			<Cmd>FBE20DEA</Cmd>
+		</CmdInfo>
+		<CmdInfo>
+			<Name>Reset Filter Used Time</Name>
+			<Len>4</Len>
+			<Cmd>FBE70DEF</Cmd>
+		</CmdInfo>
+		<CmdInfo>
+			<Name>Buzzer Test</Name>
+			<Len>4</Len>
+			<Cmd>FBA40DAC</Cmd>
+		</CmdInfo>
+		<CmdInfo>
+			<Name>Factory Init</Name>
+			<Len>4</Len>
+			<Cmd>FBE10DE9</Cmd>
+		</CmdInfo>
+	</CmdList>
+    <FrameList>
+		<FrameInfo>
+            <Name>Header</Name>
+            <Index>0</Index>
+            <Len>2</Len>
+            <Format>HEX</Format>
+            <Exp>
+                <B0>None</B0>
+            </Exp>
+		</FrameInfo>    
+		<FrameInfo>
+            <Name>PM1.0</Name>
+            <Index>2</Index>
+            <Len>2</Len>
+            <Format>INT</Format>
+            <Exp>
+                <B0>None</B0>
+            </Exp>
+		</FrameInfo>    
+		<FrameInfo>
+            <Name>PM2.5</Name>
+            <Index>4</Index>
+            <Len>2</Len>
+            <Format>INT</Format>
+            <Exp>
+                <B0>None</B0>
+            </Exp>
+		</FrameInfo>
+		<FrameInfo>
+            <Name>PM10</Name>
+            <Index>6</Index>
+            <Len>2</Len>
+            <Format>INT</Format>
+            <Exp>
+                <B0>None</B0>
+            </Exp>
+		</FrameInfo>    
+		<FrameInfo>
+            <Name>AQI Value</Name>
+            <Index>8</Index>
+            <Len>2</Len>
+            <Format>INT</Format>
+            <Exp>
+                <B0>None</B0>
+            </Exp>
+		</FrameInfo>    
+		<FrameInfo>
+            <Name>FAN RPM</Name>
+            <Index>10</Index>
+            <Len>2</Len>
+            <Format>INT</Format>
+            <Exp>
+                <B0>None</B0>
+            </Exp>
+		</FrameInfo>    
+		<FrameInfo>
+            <Name>Last Input Key, Filter Information</Name>
+            <Index>12</Index>
+            <Len>1</Len>
+            <Format>BIT</Format>
+            <Exp>
+                <B0>FAN Mode Key</B0>
+                <B1>Display Key</B1>
+                <B2>Power Key</B2>
+                <B3>Filter Key</B3>
+                <B5>Filter Switch Open</B5>
+                <B6>Filter used time over</B6>
+            </Exp>
+		</FrameInfo>    
+		<FrameInfo>
+            <Name>FAN speed</Name>
+            <Index>13</Index>
+            <Len>1</Len>
+            <Format>FUNC</Format>
+            <Exp>
+                <B0>OFF</B0>
+                <B1>AUTO</B1>
+                <B2>SPEED 1X</B2>
+                <B4>SPEED 2X</B4>
+                <B8>SPEED 3X</B8>
+                <B16>SPEED 4X</B16>
+            </Exp>
+		</FrameInfo>
+		<FrameInfo>
+            <Name>AQI Grade</Name>
+            <Index>14</Index>
+            <Len>1</Len>
+            <Format>FUNC</Format>
+            <Exp>
+                <B1>BLUE</B1>
+                <B2>GREEN</B2>
+                <B4>AMBER</B4>
+                <B8>RED</B8>
+            </Exp>
+		</FrameInfo>    
+		<FrameInfo>
+            <Name>Filter Used Time(Hour)</Name>
+            <Index>17</Index>
+            <Len>2</Len>
+            <Format>INT</Format>
+            <Exp>
+                <B0>None</B0>
+            </Exp>
+		</FrameInfo>    
+		<FrameInfo>
+            <Name>F/W Version</Name>
+            <Index>19</Index>
+            <Len>9</Len>
+            <Format>ASC</Format>
+            <Exp>
+                <B0>None</B0>
+            </Exp>
+		</FrameInfo>
+		<FrameInfo>
+            <Name>Temperature</Name>
+            <Index>28</Index>
+            <Len>2</Len>
+            <Format>INT</Format>
+            <Exp>
+                <B0>None</B0>
+            </Exp>
+		</FrameInfo>    
+		<FrameInfo>
+            <Name>Command Status</Name>
+            <Index>30</Index>
+            <Len>1</Len>
+            <Format>BIT</Format>
+            <Exp>
+                <B0>Power On Status</B0>
+                <B1>LED Display On Status</B1>
+                <B2>All LED On Status</B2>
+                <B3>Factory Init</B3>
+            </Exp>
+		</FrameInfo>    
+		<FrameInfo>
+            <Name>LED Brightness</Name>
+            <Index>31</Index>
+            <Len>1</Len>
+            <Format>FUNC</Format>
+            <Exp>
+                <B0>OFF</B0>
+                <B1>Level 1</B1>
+                <B2>Level 2</B2>
+                <B3>Level 3</B3>
+                <B4>Level 4</B4>
+            </Exp>
+		</FrameInfo>    
+		<FrameInfo>
+            <Name>Touch IC Version</Name>
+            <Index>32</Index>
+            <Len>4</Len>
+            <Format>ASC</Format>
+            <Exp>
+                <B0>None</B0>
+            </Exp>
+		</FrameInfo>
+		<FrameInfo>
+            <Name>Checksum</Name>
+            <Index>36</Index>
+            <Len>2</Len>
+            <Format>HEX</Format>
+            <Exp>
+                <B0>None</B0>
+            </Exp>
+		</FrameInfo>    
+    </FrameList>	
+</SP3i>
