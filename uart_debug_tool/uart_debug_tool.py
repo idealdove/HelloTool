@@ -11,6 +11,8 @@ from PyQt5.QtGui import QIcon
 from PyQt5.QtCore import QTimer
 from PyQt5.QtGui import QIcon, QColor
 from PyQt5.QtGui import QFont
+from PyQt5.QtWidgets import QFileDialog
+
 
 from functools import partial
 from datetime import datetime
@@ -26,8 +28,14 @@ class MainWindow(QtWidgets.QWidget, Ui_Form):
         # font = QFont("calibri", 10)
         # self.rxTextEdit.setFont(font)
         # self.logTextEdit.setFont(font)
-
         # self.setStyleSheet("QPushButton { font-family: 'calibri'; font-size: 10pt; }")
+
+
+        # inside MainWindow.__init__ after self.setupUi(self)
+        self.xmlPathLabel = QtWidgets.QLabel(self)
+        self.xmlPathLabel.setText("XML Path: (none)")
+        self.rightLayout.addWidget(self.xmlPathLabel)   # put at the very bottom
+
 
         # windows icon setting
         self.setWindowIcon(QIcon("icon.ico"))
@@ -61,7 +69,7 @@ class MainWindow(QtWidgets.QWidget, Ui_Form):
         # UART receive timer (polling every 500ms)
         self.timer = QTimer(self)
         self.timer.timeout.connect(self.read_uart)
-        self.timer.start(500)
+        self.timer.start(100)  ## 100ms period 
 
     ################################################################
     ## function group 
@@ -287,16 +295,82 @@ class MainWindow(QtWidgets.QWidget, Ui_Form):
         self.set_status("COM ports updated")
 
 
+    # def load_xml(self, filename):
+    #     """Parse XML file and create buttons for each command"""
+    #     if not os.path.exists(filename):
+    #         QtWidgets.QMessageBox.critical(
+    #             self,
+    #             "XML File Error",
+    #             f"Cannot find the XML file:\n{filename}",
+    #         )
+    #         self.set_status("XML file not found")
+    #         return
+
+    #     try:
+    #         tree = ET.parse(filename)
+    #         root = tree.getroot()
+    #     except Exception as e:
+    #         QtWidgets.QMessageBox.critical(
+    #             self,
+    #             "XML Parse Error",
+    #             f"Failed to parse XML file:\n{filename}\n\nError: {str(e)}",
+    #         )
+    #         self.set_status("XML parse error")
+    #         return
+
+    #     cmd_list = root.find("CmdList")
+    #     if cmd_list is None:
+    #         QtWidgets.QMessageBox.warning(
+    #             self,
+    #             "XML Warning",
+    #             "No <CmdList> section found in XML file.",
+    #         )
+    #         self.set_status("No CmdList in XML")
+    #         return
+
+    #     # 2-column layout placement
+    #     row, col = 0, 0
+    #     for i, cmd_info in enumerate(cmd_list.findall("CmdInfo")):
+    #         name = cmd_info.find("Name").text
+    #         value = cmd_info.find("Cmd").text.strip()
+
+    #         btn = QtWidgets.QPushButton(name)
+    #         btn.clicked.connect(lambda checked, n=name, v=value: self.send_cmd(n, v))
+
+    #         self.buttonLayout.addWidget(btn, row, col)
+
+    #         col += 1
+    #         if col >= 2:   # wrap to next row after 2 columns
+    #             col = 0
+    #             row += 1
+
+    #     self.set_status("XML commands loaded")
+
+
     def load_xml(self, filename):
         """Parse XML file and create buttons for each command"""
         if not os.path.exists(filename):
-            QtWidgets.QMessageBox.critical(
+            # Ask user to select XML file via file dialog
+            options = QFileDialog.Options()
+            options |= QFileDialog.ReadOnly
+            file_path, _ = QFileDialog.getOpenFileName(
                 self,
-                "XML File Error",
-                f"Cannot find the XML file:\n{filename}",
+                "Select XML File",
+                "",
+                "XML Files (*.xml);;All Files (*)",
+                options=options,
             )
-            self.set_status("XML file not found")
-            return
+            if not file_path:  # user canceled
+                QtWidgets.QMessageBox.critical(
+                    self,
+                    "XML File Error",
+                    f"Cannot find or select XML file:\n{filename}",
+                )
+                self.set_status("XML file not found")
+                return
+            else:
+                filename = file_path
+                self.xml_path = filename   # update xml_path
 
         try:
             tree = ET.parse(filename)
@@ -336,8 +410,10 @@ class MainWindow(QtWidgets.QWidget, Ui_Form):
                 col = 0
                 row += 1
 
-        self.set_status("XML commands loaded")
+        abs_path = os.path.abspath(filename)
+        self.xmlPathLabel.setText(f"XML Path : {abs_path}")
 
+        self.set_status("XML commands loaded")
 
 
     def toggle_com(self):

@@ -1,0 +1,79 @@
+
+
+
+
+D:\git\test\lineTool>pyinstaller -F uart_debug_tool.py
+2056 INFO: PyInstaller: 6.15.0, contrib hooks: 2025.8
+2056 INFO: Python: 3.11.7 (conda)
+2183 INFO: Platform: Windows-10-10.0.19045-SP0
+2183 INFO: Python environment: C:\Users\240514\AppData\Local\anaconda3
+2183 INFO: wrote D:\git\test\lineTool\uart_debug_tool.spec
+2183 INFO: Module search paths (PYTHONPATH):
+['C:\\Users\\240514\\AppData\\Local\\anaconda3\\Scripts\\pyinstaller.exe',
+ 'C:\\Users\\240514\\AppData\\Local\\anaconda3\\python311.zip',
+ 'C:\\Users\\240514\\AppData\\Local\\anaconda3\\DLLs',
+ 'C:\\Users\\240514\\AppData\\Local\\anaconda3\\Lib',
+ 'C:\\Users\\240514\\AppData\\Local\\anaconda3',
+ 'C:\\Users\\240514\\AppData\\Local\\anaconda3\\Lib\\site-packages',
+ 'C:\\Users\\240514\\AppData\\Local\\anaconda3\\Lib\\site-packages\\win32',
+ 'C:\\Users\\240514\\AppData\\Local\\anaconda3\\Lib\\site-packages\\win32\\lib',
+ 'C:\\Users\\240514\\AppData\\Local\\anaconda3\\Lib\\site-packages\\Pythonwin',
+ 'D:\\git\\test\\lineTool']
+2149 WARNING: qt_material must be imported after PySide or PyQt!
+4845 INFO: checking Analysis
+4861 INFO: Building because D:\git\test\lineTool\uart_debug_tool.py changed
+4861 INFO: Running Analysis Analysis-00.toc
+4861 INFO: Target bytecode optimization level: 0
+4861 INFO: Initializing module dependency graph...
+4866 INFO: Initializing module graph hook caches...
+4889 INFO: Analyzing modules for base_library.zip ...
+12418 INFO: Processing standard module hook 'hook-encodings.py' from 'C:\\Users\\240514\\AppData\\Local\\anaconda3\\Lib\\site-packages\\PyInstaller\\hooks'
+15793 INFO: Processing standard module hook 'hook-pickle.py' from 'C:\\Users\\240514\\AppData\\Local\\anaconda3\\Lib\\site-packages\\PyInstaller\\hooks'
+16860 INFO: Processing standard module hook 'hook-heapq.py' from 'C:\\Users\\240514\\AppData\\Local\\anaconda3\\Lib\\site-packages\\PyInstaller\\hooks'
+17205 INFO: Caching module dependency graph...
+17270 INFO: Looking for Python shared library...
+17277 INFO: Using Python shared library: C:\Users\240514\AppData\Local\anaconda3\python311.dll
+17277 INFO: Analyzing D:\git\test\lineTool\uart_debug_tool.py
+17345 INFO: Processing standard module hook 'hook-_ctypes.py' from 'C:\\Users\\240514\\AppData\\Local\\anaconda3\\Lib\\site-packages\\PyInstaller\\hooks'
+17481 INFO: Processing standard module hook 'hook-xml.py' from 'C:\\Users\\240514\\AppData\\Local\\anaconda3\\Lib\\site-packages\\PyInstaller\\hooks'
+17503 INFO: Processing standard module hook 'hook-xml.etree.cElementTree.py' from 'C:\\Users\\240514\\AppData\\Local\\anaconda3\\Lib\\site-packages\\PyInstaller\\hooks'17504 INFO: Processing standard module hook 'hook-PyQt5.py' from 'C:\\Users\\240514\\AppData\\Local\\anaconda3\\Lib\\site-packages\\PyInstaller\\hooks'
+18267 INFO: Processing standard module hook 'hook-PyQt5.QtWidgets.py' from 'C:\\Users\\240514\\AppData\\Local\\anaconda3\\Lib\\site-packages\\PyInstaller\\hooks'
+19033 INFO: Processing standard module hook 'hook-PyQt5.QtCore.py' from 'C:\\Users\\240514\\AppData\\Local\\anaconda3\\Lib\\site-packages\\PyInstaller\\hooks'
+19717 INFO: Processing standard module hook 'hook-PyQt5.QtGui.py' from 'C:\\Users\\240514\\AppData\\Local\\anaconda3\\Lib\\site-packages\\PyInstaller\\hooks'
+20071 INFO: Processing module hooks (post-graph stage)...
+20086 WARNING: Hidden import "sip" not found!
+20432 INFO: Performing binary vs. data reclassification (97 entries)
+20473 INFO: Looking for ctypes DLLs
+20487 WARNING: Ignoring /System/Library/Frameworks/IOKit.framework/IOKit imported from C:\Users\240514\AppData\Local\anaconda3\Lib\site-packages\serial\tools\list_ports_osx.py - only basenames are supported with ctypes imports!
+20487 WARNING: Ignoring /System/Library/Frameworks/CoreFoundation.framework/CoreFoundation imported from C:\Users\240514\AppData\Local\anaconda3\Lib\site-packages\serial\tools\list_ports_osx.py - only basenames are supported with ctypes imports!
+20505 INFO: Analyzing run-time hooks ...
+20506 INFO: Including run-time hook 'pyi_rth_inspect.py' from 'C:\\Users\\240514\\AppData\\Local\\anaconda3\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+20508 INFO: Including run-time hook 'pyi_rth_pyqt5.py' from 'C:\\Users\\240514\\AppData\\Local\\anaconda3\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+20508 INFO: Processing pre-find-module-path hook 'hook-_pyi_rth_utils.py' from 'C:\\Users\\240514\\AppData\\Local\\anaconda3\\Lib\\site-packages\\PyInstaller\\hooks\\pre_find_module_path'
+20514 INFO: Processing standard module hook 'hook-_pyi_rth_utils.py' from 'C:\\Users\\240514\\AppData\\Local\\anaconda3\\Lib\\site-packages\\PyInstaller\\hooks'        
+20519 INFO: Including run-time hook 'pyi_rth_pkgutil.py' from 'C:\\Users\\240514\\AppData\\Local\\anaconda3\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+20527 INFO: Creating base_library.zip...
+20583 INFO: Looking for dynamic libraries
+20761 INFO: Extra DLL search directories (AddDllDirectory): ['C:\\Users\\240514\\AppData\\Local\\anaconda3\\Lib\\site-packages\\PyQt5\\Qt5\\bin']
+20761 INFO: Extra DLL search directories (PATH): ['C:\\Users\\240514\\AppData\\Local\\anaconda3\\Lib\\site-packages\\PyQt5\\Qt5\\bin']
+21767 INFO: Warnings written to D:\git\test\lineTool\build\uart_debug_tool\warn-uart_debug_tool.txt
+21788 INFO: Graph cross-reference written to D:\git\test\lineTool\build\uart_debug_tool\xref-uart_debug_tool.html
+21809 INFO: checking PYZ
+21835 INFO: checking PKG
+21837 INFO: Building because toc changed
+21838 INFO: Building PKG (CArchive) uart_debug_tool.pkg
+30818 INFO: Building PKG (CArchive) uart_debug_tool.pkg completed successfully.
+30835 INFO: Bootloader C:\Users\240514\AppData\Local\anaconda3\Lib\site-packages\PyInstaller\bootloader\Windows-64bit-intel\run.exe
+30835 INFO: checking EXE
+30840 INFO: Building because toc changed
+30841 INFO: Building EXE from EXE-00.toc
+30844 INFO: Copying bootloader EXE to D:\git\test\lineTool\dist\uart_debug_tool.exe
+30886 INFO: Copying icon to EXE
+30908 INFO: Copying 0 resources to EXE
+30908 INFO: Embedding manifest in EXE
+30942 INFO: Appending PKG archive to EXE
+30985 INFO: Fixing EXE headers
+31238 INFO: Building EXE from EXE-00.toc completed successfully.
+31238 INFO: Build complete! The results are available in: D:\git\test\lineTool\dist
+
+D:\git\test\lineTool>
